@@ -16,8 +16,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+
+        'name','email','password',
+        'created_at','updated_at',
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Models\OnlineReviews')->latest(); //投稿を新しい順に表示させる
+    }
 
     /**
      * The attributes that should be hidden for arrays.
