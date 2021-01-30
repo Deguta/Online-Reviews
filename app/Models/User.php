@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -16,9 +16,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-
-        'name','email','password',
-        'created_at','updated_at',
+        'name','name_kana','email','password',
+        'gender','age','birthday','postal_code','address','phone',
+        'created_at','updated_at','title','text',
     ];
 
     public function reviews()
