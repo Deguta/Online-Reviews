@@ -23,7 +23,7 @@ class User extends Authenticatable
 
     public function reviews()
     {
-        return $this->hasMany('App\Models\OnlineReviews')->latest(); //投稿を新しい順に表示させる
+        return $this->hasMany('App\Models\OnlineReviews')->latest(); //1対多の多の部分に当たる。投稿を新しい順に表示させる
     }
 
     /**
