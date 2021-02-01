@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -51,21 +51,36 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'name_kana' => ['required', 'string', 'max:255'],
+            'gender' => ['required','boolean'],
+            'age' => ['required','digits:2'],
+            'birthday' => ['required','integer'],
+            'postal_code' => ['required','digits:7'],
+            'address' => ['required','max:800'],
+            'phone' => ['required','numeric','digits_between:10,11'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
+
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return App\Models\User
+     * @return \App\User
      */
     protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],
+            'name_kana' =>$data['name_kana'],
+            'gender' =>$data['gender'],
+            'age' => $data['age'],
+            'birthday' => $data['birthday'],
+            'postal_code' => $data['postal_code'],
+            'address' => $data['address'],
+            'phone' => $data['phone'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
