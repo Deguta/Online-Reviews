@@ -2,19 +2,26 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>YM-PortFolio</title>
-    <link rel="stylesheet" href="{{ asset('css/OnlineReviews/top_page.css') }}">
-    <link href="{{asset('/assets/css/reset.css')}}" rel="stylesheet">
+    <title>トップページ</title>
+    <link rel="stylesheet" href="{{ asset('css/OnlineReviews/common.css') }}">
 </head>
-    <body>
-        <div class="wrapper">
-            <header>
-            </header>
+<body>
+    <div class="wrapper">
+        <header>
+        @component('components.shop_header')
+            @slot('header')
+            @endslot
+        @endcomponent
+        </header>
 
-            <div class="main">mainページ
-                <p>shopsのviewのindex</p>
-            </div>
+        <div class="main">
+        @component('shops.shop_list')
+            @slot('list')
+            @endslot
+        @endcomponent
         </div>
-    </body>
-</html>
 
+        
+    </>
+</body>
+</html>
