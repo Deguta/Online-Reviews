@@ -1,17 +1,3 @@
-/* ログイン機能headerのcss  */
-
-body {
-  width: 100%;
-  height:100vh;
-}
-
-.wrapper {
-  border: solid;
-  border-color: red;
-  height:1500px;
-
-}
-
 /* headerのcss */
 header {
   width: 1017px;
@@ -68,9 +54,4 @@ header {
   text-decoration: none;
 }
 
-/* mainのcss */
-.main {
-  border: solid;
-  border-color: rgb(245, 245, 12);
-  height:1000px;
-}
+
