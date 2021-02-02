@@ -1,5 +1,3 @@
-@yield('header')
-
 <link rel="stylesheet" href="{{ asset('css/OnlineReviews/header.css') }}">
 
 @if (Route::has('login'))
