@@ -35,4 +35,6 @@ Route::group(['prefix' => 'online_reviews','middleware' => 'auth'], function(){
 //shopのルーティング
 Route::group(['prefix' => 'shop'],function(){
   Route::get('index','ShopController@index')->name('shop.list');
+  Route::get('show','ShopController@show')->name('shop.show');//お店の詳細を確認する
+
 });

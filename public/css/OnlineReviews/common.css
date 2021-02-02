@@ -6,6 +6,15 @@ body {
 .wrapper {
   border: solid;
   border-color: red;
-  height:1500px;
+  height:1000px;
 
+}
+
+.main {
+  width:90%;
+  height:800px;
+  border:solid;
+  border-color:yellow;
+  margin: auto;
+  margin-top: 40px;
 }

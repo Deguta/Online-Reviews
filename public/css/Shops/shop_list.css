@@ -1,0 +1,41 @@
+.list-box {
+  width:80%;
+  height: 500px;
+  margin: auto;
+}
+
+.list-container {
+  border: solid;
+  border-color: rgba(0, 0, 0, 0.125);
+  border-radius: 10px 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1; /* 必要であればリンク要素の重なりのベース順序指定 */
+  
+}
+
+.list-container a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-indent:-999px;
+  z-index: 2; /* 必要であればリンク要素の重なりのベース順序指定 */
+}
+
+
+
+
+.hospital-name {
+  font-size:20px;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+}
+
+.address-name {
+  font-size:20px;
+  padding: 0.75rem 1.25rem;
+}
