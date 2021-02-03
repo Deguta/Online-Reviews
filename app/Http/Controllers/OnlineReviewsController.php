@@ -17,14 +17,7 @@ class OnlineReviewsController extends Controller
      */
     public function index()
     {
-        $names = DB::table('users')
-        ->select('name')
-        ->get();
-
-        $reviews =DB::table('online_reviews')
-        ->select('title','text')
-        ->get();
-        return view('shops.shop_show',compact('names','reviews'));
+        
     }
 
     /**
@@ -52,8 +45,7 @@ class OnlineReviewsController extends Controller
         // dd($title,$text);
 
         $review->save();
-        return redirect()->route('shops.shop_list')
-;
+        return redirect()->route('shop.list');
     }
 
     /**
