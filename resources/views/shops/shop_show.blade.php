@@ -42,11 +42,28 @@
             @endforeach
           </div>
 
-           
+           @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
 
-            
-
-
+            <form method="POST" action="{{ route('online_reviews.store')}}">
+            @csrf
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" placeholder="タイトル" value="">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" placeholder="投稿内容を入れて下さい"></textarea>
+                </div>
+                <a href="{{ route('shop.list') }}">病院一覧に戻る</a>
+                <button type="submit" class="btn btn-success btn-block">投稿する</button>
+            </form>
+        </div>
+    </div>
   </body>
 </html>
-
