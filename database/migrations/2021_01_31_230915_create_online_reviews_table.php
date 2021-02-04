@@ -19,7 +19,7 @@ class CreateOnlineReviewsTable extends Migration
             $table->char('text',70); //クチコミ 70文字に制限
             $table->unsignedBigInteger('user_id'); //user_idの外部キー
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');//user_idの外部キーの制約と投稿者が削除されたらその投稿も削除できるように紐付け
-            $table->unsignedBigInteger('hospital_id'); //user_idの外部キー
+            $table->unsignedBigInteger('hospital_id'); //user_idの外部キー 現在なしで登録可能にしている
             $table->foreign('hospital_id')->references('id')->on('users')->onDelete('cascade');//user_idの外部キーの制約と投稿者が削除されたらその投稿も削除できるように紐付け
             $table->timestamps();
         });

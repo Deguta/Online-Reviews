@@ -6,6 +6,7 @@ use App\Models\OnlineReviews;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;//クエリビルダでDBに保存されているものを表示させる。
+use App\Http\Requests\StoreOnlineReviews;
 
 
 class OnlineReviewsController extends Controller
@@ -35,7 +36,7 @@ class OnlineReviewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreOnlineReviews $request)
     {
         $review = new OnlineReviews;
         $review->user_id = $request->user()->id;
