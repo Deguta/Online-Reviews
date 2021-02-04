@@ -1,6 +1,11 @@
+.content {
+  margin-top: 40px;
+  border: solid;
+}
+
 .list-box {
   width:80%;
-  height: 500px;
+  height: auto;
   margin: auto;
 }
 
@@ -10,8 +15,6 @@
   border-radius: 10px 10px;
   margin-bottom: 20px;
   position: relative;
-  z-index: 1; /* 必要であればリンク要素の重なりのベース順序指定 */
-  
 }
 
 .list-container a {
@@ -21,11 +24,7 @@
   width: 100%;
   height: 100%;
   text-indent:-999px;
-  z-index: 2; /* 必要であればリンク要素の重なりのベース順序指定 */
 }
-
-
-
 
 .hospital-name {
   font-size:20px;
@@ -38,4 +37,64 @@
 .address-name {
   font-size:20px;
   padding: 0.75rem 1.25rem;
+}
+
+
+/* 投稿内容のCSS */
+
+.posted-table {
+  height: auto;
+  border: solid;
+  border-color:green;
+  border-radius: 10px 10px 0 0px ;
+
+
+
+}
+
+.posted-header {
+  display: flex;
+  justify-content: start;
+}
+
+
+.user-id {
+  font-size:20px;
+  display: flex;
+  border: solid;
+  border-color:red;
+  padding: 0.75rem 1.25rem;
+}
+
+
+.title {
+  font-size:20px;
+  border: solid;
+  border-color:blue;
+  padding: 0.75rem 1.25rem;
+
+}
+
+
+
+.text-container {
+  padding: 0.75rem 1.25rem;
+  border: solid;
+  border-color:red;
+  
+}
+
+.text {
+  border: solid;
+  border-color:yellow;
+  font-size:20px;
+}
+
+.date-container {
+  border-radius: 0px 0px 10px 10px ;
+  border: solid;
+  border-color:black;
+  margin-bottom: 20px;
+  padding: 0.75rem 1.25rem;
+
 }

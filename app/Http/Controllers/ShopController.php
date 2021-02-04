@@ -19,13 +19,9 @@ class ShopController extends Controller
 
     public function show() //{id}は未定
     {
-        $names = DB::table('users')
-        ->select('name')
-        ->get();
-
         $reviews =DB::table('online_reviews')
-        ->select('title','text')
+        ->select('title','text','user_id','created_at')
         ->get();
-        return view('shops.shop_show',compact('names','reviews'));
+        return view('shops.shop_show',compact('reviews'));
     }
 }
