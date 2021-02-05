@@ -25,8 +25,9 @@ class StoreOnlineReviews extends FormRequest
     {
         return [
             //
-            'title' => 'required|char|max:50',
-            'text' => 'required|char|max:70'
+            'title' => 'required|max:20',
+            'text' => 'required|max:70',
+
         ];
     }
 }

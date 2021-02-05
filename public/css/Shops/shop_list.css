@@ -47,9 +47,6 @@
   border: solid;
   border-color:green;
   border-radius: 10px 10px 0 0px ;
-
-
-
 }
 
 .posted-header {
@@ -98,3 +95,57 @@
   padding: 0.75rem 1.25rem;
 
 }
+
+.post-field {
+  border: solid;
+  border-color:red;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+label[for="title-display"] {
+  display:block;
+  border: solid;
+  border-color:yellow;
+  font-size: 20px;
+
+}
+
+#title-field {
+  display:block;
+
+  border: solid;
+  border-color:black;
+  font-size: 20px;
+  width: 30%;
+}
+
+.post-text {
+  border: solid;
+  border-color:green;
+
+}
+
+textarea {
+  width:50%;
+  font-size: 20px;
+}
+
+#back-btn {
+  color: #000000;
+  background-color: #EFEFEFEF;
+  font-size: 18px;
+  border: solid 1px #000000;
+  text-decoration: none;
+  border-radius: 1px 1px 1px 1px ;
+  padding: 1px 6px;
+    border-width: 2px;
+
+
+}
+
+

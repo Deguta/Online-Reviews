@@ -31,8 +31,12 @@
             </div>
 
             <div class="text-container">投稿内容
-              <div class="text"> {{ $review->text}}</div>
+              <div class="text"> {!! nl2br(e($review->text,10)) !!}</div>
             </div>
+            {{--  {!! nl2br(e(Str::limit($review->title, 50))) !!}
+            {!! nl2br(e($review->text)) !!}  --}}
+            {{--  {!! nl2br(e(Str::limit($post->body, 200))) !!}  --}}
+            {{--  続きを呼ぶ場合は上記の書き方  --}}
 
             <div class="date-container">
               <span class="date">
@@ -53,15 +57,21 @@
             @endif
 
             <form method="POST" action="{{ route('online_reviews.store')}}">
-            @csrf
-                <div class="form-group">
-                    <input type="text" class="form-control" name="subject" placeholder="タイトル" value="">
+              @csrf
+              <div class="post-field">
+                <label for="title-display">タイトル<label>
+                <input type="text" name="title" id="title-field" placeholder="タイトル入力" >
+                
+                
+                <div class="post-text">
+                  <label>投稿文を入力して下さい</label><br>
+                  <textarea name="text" rows="2" cols="50" placeholder="70文字まで投稿"></textarea><br>
                 </div>
-                <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" placeholder="投稿内容を入れて下さい"></textarea>
+                    <a id="back-btn" href="{{ route('shop.list') }}">一覧に戻る</a>
+                    <input type="reset"value="取り消し"></input>
+                    <input type="submit" value="投稿する"></input>
                 </div>
-                <a href="{{ route('shop.list') }}">病院一覧に戻る</a>
-                <button type="submit" class="btn btn-success btn-block">投稿する</button>
+              </div>
             </form>
         </div>
     </div>

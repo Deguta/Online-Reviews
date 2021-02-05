@@ -43,10 +43,8 @@ class OnlineReviewsController extends Controller
         $review->title = $request->input('title');
         $review->text = $request->input('text');
 
-        // dd($title,$text);
-
         $review->save();
-        return redirect()->route('shop.list');
+        return redirect()->route('shop.show');
     }
 
     /**
