@@ -133,6 +133,7 @@ label[for="title-display"] {
 textarea {
   width:50%;
   font-size: 20px;
+  resize: none;
 }
 
 #back-btn {

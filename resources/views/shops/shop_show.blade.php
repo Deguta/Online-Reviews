@@ -68,8 +68,8 @@
                   <textarea name="text" rows="2" cols="50" placeholder="70文字まで投稿"></textarea><br>
                 </div>
                     <a id="back-btn" href="{{ route('shop.list') }}">一覧に戻る</a>
-                    <input type="reset"value="取り消し"></input>
-                    <input type="submit" value="投稿する"></input>
+                    <button type="reset" value="リセットする">リセット</button>
+                    <button type="submit" value="投稿する">投稿する</button>
                 </div>
               </div>
             </form>
