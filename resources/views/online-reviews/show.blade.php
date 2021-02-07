@@ -22,7 +22,7 @@
               <div class="address-name">大阪府大阪市</div>
             </div>
 
-            @foreach ($reviews as $review)
+            @foreach ((array) $review as $review))
             <div class="posted-table">
               <div class="posted-header">
                 <div class="user-id">User-ID {{ $review->user_id }}</div>
@@ -31,13 +31,8 @@
             </div>
 
             <div class="text-container">投稿内容
-              <div class="text"> {!! nl2br(e($review->text,10)) !!}</div>
+              <div class="text">{{$review->text}}</div>
             </div>
-            {{--  {!! nl2br(e(Str::limit($review->title, 50))) !!}
-            {!! nl2br(e($review->text)) !!}  --}}
-            {{--  {!! nl2br(e(Str::limit($post->body, 200))) !!}  --}}
-            {{--  続きを呼ぶ場合は上記の書き方  --}}
-
             <div class="date-container">
               <span class="date">
                   投稿日時 {{ $review->created_at }}
@@ -65,11 +60,11 @@
                 
                 <div class="post-text">
                   <label>投稿文を入力して下さい</label><br>
-                  <textarea name="text" rows="2" cols="50" placeholder="70文字まで投稿"></textarea><br>
+                  <textarea name="text" rows="2" cols="50" placeholder="255文字まで投稿"></textarea><br>
                 </div>
                     <a id="back-btn" href="{{ route('shop.list') }}">一覧に戻る</a>
                     <button type="reset" value="リセットする">リセット</button>
-                    <button type="submit" value="投稿する">投稿する</button>
+                    <button type="submit" value="変更する">変更する</button>
                 </div>
               </div>
             </form>

@@ -2,7 +2,7 @@
 
 <div class="list-box">
   <div class="list-container">
-      <a href="{{ route('shop.show') }}"></a>
+      <a href="{{ route('online_reviews.index') }}"></a>
       <div class="hospital-name">A病院</div>
       <div class="address-name">大阪府大阪市</div>
   </div>

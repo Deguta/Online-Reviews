@@ -18,7 +18,12 @@ class OnlineReviewsController extends Controller
      */
     public function index()
     {
-        
+        {
+            $reviews =DB::table('online_reviews')
+            ->select('title','text','user_id','created_at')
+            ->get();
+            return view('online-reviews.index',compact('reviews'));
+        }
     }
 
     /**
@@ -44,7 +49,7 @@ class OnlineReviewsController extends Controller
         $review->text = $request->input('text');
 
         $review->save();
-        return redirect()->route('shop.show');
+        return redirect()->route('online_reviews.index');
     }
 
     /**
@@ -56,7 +61,8 @@ class OnlineReviewsController extends Controller
     public function show($id)
     {
         $review = OnlineReviews::find($id);
-        return view('online_reviews.show',compact('review'));
+
+        return view('online-reviews.show',compact('review'));
     }
 
     /**
