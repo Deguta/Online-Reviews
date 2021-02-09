@@ -40,6 +40,7 @@
               </span>
             </div>
             @endforeach
+             {{ $reviews->links(('pagination.mypagination')) }} 
           </div>
 
            @if ($errors->any())
@@ -74,9 +75,9 @@
   </body>
 </html>
 
-
+{{--  
 変数確認用 @if(isset($review))
     <p>$review</p>
 @else
     <p>メッセージは存在しません。</p>
-@endif
+@endif  --}}

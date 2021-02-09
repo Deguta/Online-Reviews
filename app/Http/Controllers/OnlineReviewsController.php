@@ -21,14 +21,20 @@ class OnlineReviewsController extends Controller
         {
             $reviews =DB::table('online_reviews')
             ->select('title','text','user_id','created_at')
-            ->get();
+            ->orderBy('created_at','desc')// 登録日時の順序を設定できる laravel公式にてクエリビルダにある。
+            ->paginate(5); //メソッドチェーンのget
+
             return view('online-reviews.index',compact('reviews'));
+            
         }
     }
+
+  
 
     /**
      * Show the form for creating a new resource.
      *
+     * 
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -60,9 +66,10 @@ class OnlineReviewsController extends Controller
      */
     public function show($id)
     {
-        $review = OnlineReviews::find($id);
+        $review = OnlineReviews::find($id); //ddで$reviewに値が入っていないのでルーティングを確認
+        // dd($id);
 
-        return view('online-reviews.show',compact('review'));
+        return view('online-reviews.show',['id '=> '$review']);
     }
 
     /**

@@ -22,7 +22,7 @@
               <div class="address-name">大阪府大阪市</div>
             </div>
 
-            @foreach ((array) $review as $review))
+            @foreach ((array) $review as $review)) //array Invalid argument supplied for foreach() ..のエラーの簡単な対処法について Qiita
             <div class="posted-table">
               <div class="posted-header">
                 <div class="user-id">User-ID {{ $review->user_id }}</div>
