@@ -11,6 +11,8 @@
 |
 */
 
+use App\Models\OnlineReviews;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,7 +30,7 @@ Route::group(['prefix' => 'online_reviews','middleware' => 'auth'], function(){
   Route::get('index','OnlineReviewsController@index')->name('online_reviews.index'); // 投稿一覧表
   Route::get('create','OnlineReviewsController@create')->name('online_reviews.create');//投稿ページの表示
   Route::post('store','OnlineReviewsController@store')->name('online_reviews.store');//投稿を保存するルーティング
-  Route::get('show/{id}','OnlineReviewsController@show')->name('online_reviews.show');//投稿の詳細を確認するルーティング
+  Route::get('show/{id}',function($id){return view('online-reviews.show');},'OnlineReviewsController@show')->name('online_reviews.show');
 });
 
 

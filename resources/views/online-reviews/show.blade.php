@@ -51,8 +51,8 @@
             </div>
             @endif
 
-            <form method="POST" action="{{ route('online_reviews.store')}}">
-              @csrf
+            {{--  <form method="GET" action="{{ }}"> //editを編集する際はPOSTに変更　route('online_reviews.store')
+              @csrf  --}}
               <div class="post-field">
                 <label for="title-display">タイトル<label>
                 <input type="text" name="title" id="title-field" placeholder="タイトル入力" >
@@ -72,3 +72,4 @@
     </div>
   </body>
 </html>
+
