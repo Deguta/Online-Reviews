@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>トップページ</title>
     <link rel="stylesheet" href="{{ asset('css/Shops/shop_list.css') }}">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
 <body>
     <div class="wrapper">
@@ -32,15 +33,14 @@
 
             <div class="text-container">投稿内容
               <div class="text">{!! nl2br(e(Str::limit($review->text, 100))) !!}</div>
-               <a href="{{ route('online_reviews.show',[$review->text]) }}">投稿の詳細を読む</a>
-            </div>
+              <a href="{{ route('online_reviews.show',[$review->id]) }}">投稿の詳細を読む</a>            </div>
             <div class="date-container">
               <span class="date">
                   投稿日時 {{ $review->created_at }}
               </span>
             </div>
             @endforeach
-             {{ $reviews->links(('pagination.mypagination')) }} 
+             {{ $reviews->links(('vendor.pagination.sample-pagination')) }} 
           </div>
 
            @if ($errors->any())
@@ -75,9 +75,9 @@
   </body>
 </html>
 
-{{--  
-変数確認用 @if(isset($review))
-    <p>$review</p>
-@else
-    <p>メッセージは存在しません。</p>
-@endif  --}}
+
+
+@if ( ! isset($reviews->flag) )
+<?php $reviews->flag = null; ?>
+@endif
+

@@ -69,7 +69,7 @@ class OnlineReviewsController extends Controller
         $review = OnlineReviews::find($id); //ddで$reviewに値が入っていないのでルーティングを確認
         // dd($id);
 
-        return view('online-reviews.show',['id '=> '$review']);
+        return view('online-reviews.show',compact('review'));
     }
 
     /**
