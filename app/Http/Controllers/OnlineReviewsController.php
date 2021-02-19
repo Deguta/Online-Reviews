@@ -80,7 +80,9 @@ class OnlineReviewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $review = OnlineReviews::find($id);
+
+        return view('online-reviews.edit',compact('review'));
     }
 
     /**

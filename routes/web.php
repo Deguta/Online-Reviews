@@ -31,6 +31,7 @@ Route::group(['prefix' => 'online_reviews','middleware' => 'auth'], function(){
   Route::get('create','OnlineReviewsController@create')->name('online_reviews.create');//投稿ページの表示
   Route::post('store','OnlineReviewsController@store')->name('online_reviews.store');//投稿を保存するルーティング
   Route::get('show/{id}', 'OnlineReviewsController@show')->name('online_reviews.show');
+  Route::get('edit/{id}', 'OnlineReviewsController@edit')->name('online_reviews.edit');
 });
 
 
