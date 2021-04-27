@@ -33,7 +33,7 @@
 
             <div class="text-container">投稿内容
               <div class="text">{{$review->text}}</div>
-              {{--  <div class="text">{!! nl2br(e(Str::limit($review->text, 100))) !!}</div>  --}}
+              <div class="text">{!! nl2br(e(Str::limit($review->text, 100))) !!}</div>
               {{--  <a href="{{ route('online_reviews.show',[$review->id]) }}">投稿の詳細を読む</a>              --}}
             </div>
             <div class="date-container">
