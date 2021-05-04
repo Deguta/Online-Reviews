@@ -16,6 +16,7 @@
 
                     ログインできました
                 </div>
+                <a href="{{ route('online_reviews.index') }}">トップページに戻る</a>
             </div>
         </div>
     </div>
