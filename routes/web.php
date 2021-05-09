@@ -41,3 +41,8 @@ Route::group(['prefix' => 'shop'],function(){
   Route::get('show','ShopController@show')->name('shop.show');//お店の詳細を確認する
 
 });
+
+// お問い合わせの送信メールのルーティング
+Route::get('/contact/index', 'ContactController@index')->name('contact.index');
+Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
+Route::post('/contact/complete', 'ContactController@send')->name('contact.send');
