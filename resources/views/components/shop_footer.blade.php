@@ -1,13 +1,15 @@
 <link rel="stylesheet" href="{{ asset('css/OnlineReviews/footer.css') }}">
 
-<div class="img-box">
-  <img src="images/2779650_m.jpg" class="img-footer" alt="妊婦の写真" title="妊婦の写真">
-  <ul class="text-box">テキストメッセージ
-    <li>リスト1
-    <li class="list-2">リスト2
-    <li>リスト3
-  </ul>
-</div>
+{{--  お問い合わせ  --}}
+    <footer class="bg-dark pt-5 pb-5">
+      <div class="container">
+        <div class=" card-body text-center text-light">
+          <a href="{{ route('contact.index') }}" id="contact-page">
+            <h4>お問い合わせはこちらになります</h4>
+          </a>
+        </div>
+      </div >
+    </footer>
 
 
 
