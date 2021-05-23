@@ -14,22 +14,19 @@
         @endcomponent
         </header>
 
-        {{--  Study-Of-PostSiteの概要  --}}
+    {{--  Hospitals Reviewsへの概要  --}}
     <section class="border border-dark bg-light">
       <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center mt-5">
                     <h1 id="description">
-                      Study-Of-PostSiteとは?
+                      ようこそHospitals Reviewsへ
                     </h1>
                 </div>
-                <p class="text-center h2-desc font-weight-bold">皆さんの学習状況を投稿しあう投稿サイトになります。</p>
-                <p class="text-center h2-desc font-weight-bold">誹謗中傷の投稿は削除させていただきます。</p>
-                <p class="text-center h2-desc font-weight-bold">皆さんで学習のモチベーションを高め合いましょう!!</p>
 
                 <div class="text-center mt-5 mb-5">
-                    <a href="{{ route('bulletin-board.create') }}" class="btn btn-danger btn-lg"><i class="fa fa-edit mr-2"></i>投稿はこちらになります</a>
+                    <a href="{{ route('shop.list') }}"class="btn btn-danger btn-lg"><i class="fa fa-edit mr-2"></i>投稿はこちらになります</a>
                 </div>
             </div>
         </div>
