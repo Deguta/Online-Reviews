@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/OnlineReviews/header.css') }}">
 
 @if (Route::has('login'))
-    <p class="ribbon"><span>Hospital Reviews</span></p>
+    <p class="ribbon">Hospital Reviews</span></p>
 
     <div class="header-right">
         @auth
