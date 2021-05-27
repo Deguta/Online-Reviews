@@ -38,14 +38,18 @@
         </div>
       </div>
     </section>
-        
-        <footer>
-        @component('components.shop_footer')
-          @slot('footer')
-          @endslot
-        @endcomponent
-        </footer>
-    </>
+
+    {{--  お問い合わせ  --}}
+    <footer class="bg-dark pt-5 pb-5">
+      <div class="container">
+        <div class=" card-body text-center text-light">
+          <a href="{{ route('contact.index') }}" id="contact-page">
+            <h4>お問い合わせはこちらになります</h4>
+          </a>
+        </div>
+      </div >
+    </footer>
+
 </body>
 </html>
 

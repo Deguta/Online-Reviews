@@ -1,9 +1,4 @@
-<header>
-  @component('components.header')
-      @slot('header')
-      @endslot
-  @endcomponent
-</header>
+@extends('layouts.common')
 
 @section('content')
 <form method="POST" action="{{ route('contact.confirm') }}">
