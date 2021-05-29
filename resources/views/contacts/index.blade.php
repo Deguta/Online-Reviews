@@ -10,10 +10,6 @@
       <p class="panel-heading  h2 p-3 text-center bg-dark text-white">お問い合わせフォーム</p>
 
       <div class="panel-body">
-          <!-- //hasは入力値の存在チェック 特定のエラーの取得 {{ $errors->first('username') }}
-            （※配列形式で結果が返ってくるため、first()で最初のものを取得している。）
-              エラーの存在チェック {{ $errors->has('username') }}firstはクエリビルダーのことで無ければ空白というエラーを出す-->
-
           <div class="form-group">
 
             <div class="my-3 mx-auto col-md-7">
