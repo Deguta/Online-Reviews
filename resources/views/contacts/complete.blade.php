@@ -1,4 +1,4 @@
-@extends('layout.bulletin-board-common')
+@extends('layouts.common')
 @section('title', '送信完了画面')
 <link rel="stylesheet" href="{{ asset('/css/bulletin-board/index-list.css') }}" >
 <link rel="stylesheet" href="{{ asset('/css/bulletin-board/index-list.css') }}" media="screen and (max-width:750px)" >
